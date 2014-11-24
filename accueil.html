@@ -1,0 +1,149 @@
+<!-- Par Eliass Hajajou, Yassine M'Chaar & Imane Choukri--> 			
+							
+																<!-- Page d'accueil --> 
+																												
+																
+<?php
+		 
+session_start ();		// On démarre la session
+?>
+
+<html>
+   <head>
+   
+     <title>Game Center Corp</title>
+     <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
+     <link rel="stylesheet" type="text/css" href="style1.css" media="screen" />
+   </head>
+   <body>
+   
+   										<!-- Informer au visite s'il est connecter avec son compte à la page courante--> 
+   										
+   <?php
+		
+		if(session_start()==1)
+			echo 'Bonjour "'.$_SESSION['login'].'"';
+		else
+			echo ' Bonjour visiteur';
+	?>
+	
+   <hr/>
+   	
+   		<!-- behavior = alternate permet de faire deflier Game center de gauche à droite --> 
+   		
+     <MARQUEE BEHAVIOR="alternate">Game Center</MARQUEE>
+     			
+    	<hr/>
+    
+    						  <!-- Menu deroulant voir le css style1 -->  
+    											  
+<ul id="menu-deroulant"> 
+	<li><a href="accueil.html">	|<img src="./images/accueil.png" width="17" height="17" alt="accueil"> Accueil |</a></li>
+	<li><a href="jeux.html"><img src="./images/jeuxma.png" width="17" height="17" alt="jeux"> Jeux |</a>
+		<ul>
+			<li><a href="categorie.html"> <img src="./images/des.png" width="17" height="17" alt="categorie">Jeux par catégorie</a></li>
+			<li><a href="#"><a href="#"><img src="./images/intensite.png" width="17" height="17" alt="intensite"> Jeux par intensité</a></li>
+			<li><a href="#"><a href="#"><img src="./images/deux.jpg" width="17" height="17" alt="solo"> Jeux individuel ou collectif</a></li>
+		</ul>
+	</li>
+	
+	<li><a href="categorie.html"> <img src="./images/des.png" width="17" height="17" alt="des">Categorie |</a>
+	</li>
+	
+
+	<li><a href="seconnecter.html"> Mon Compte |</a>
+		<ul>
+			<li><a href="seconnecter.html"><img src="./images/connexion.png" width="22" height="17" alt="connexion">Se connecter</a></li>
+			<li><a href="formulaire.html"><img src="./images/carte.jpg" width="17" height="17" alt="carte">s'inscrire</a></li>
+		</ul>
+	</li>
+	
+		 											  <!-- Barre qui recherche un produit tapez par l'user -->  
+		 											  
+	    	<li>Rechercher</li>
+ 		    <li><div id="searchbar"></li>
+            	 <li>
+            	 		<form action="" class="formulaire">
+               			  		 <input class="champ" type="text" placeholder="Tapez  votre recherche..."/>
+                 	     		 <input class="bouton" type="button" />
+                       </form>
+        	    </li>
+        	  </div>         
+</ul>
+	
+<hr/>
+	 
+<h1 class="banniere">
+		<img src="accueil.png" width="40" height="40" alt="Mon Image">Accueil <img src="accueil.png" width="40" height="40" alt="Mon Image">
+</h1>
+ 
+
+		
+				  <!-- a modifier-->
+		
+<center>
+
+					<h2><b><u> <img src="star.png" width="50" height="50" alt="Mon Image">Notre catalogue Game Center : <img src="star.png" width="50" height="50" alt="Mon Image"></u></b></br> </h2>
+	
+
+
+<form method="post" action="formulaire_jeu.php">
+			
+	<div class="styled-select">
+			<select name="Menu" size="14">
+					<option value="Cabane">Cabane</option>
+					<option value="Millionnaire">Millionnaire</option>
+					<option value="Cluedo">Cluedo</option>
+					<option value="Monopoly">Monopoly</option>
+					<option value="Quad raptor">Quad raptor</option>
+					<option value="Puissance 4">Puissance 4</option>
+					<option value="Trotinette"> Trotinette  </option>
+					<option value="Barbie"> Barbie </option>
+					<option value="Bratz"> Bratz </option>
+					<option value="Echec">  Echec </option>
+					<option value="Action man"> Action man  </option>
+					<option value="Circuit car"> Circuit car </option>
+					<option value="Jungle Speed"> Jungle Speed </option>
+			</select>
+	</div>
+<br/> 
+<br/>
+				<input type="submit" value="Valider" name ="valider" />
+				
+</form>
+
+
+
+	 
+	
+	<hr/>
+	
+</center>			
+			<table border="1" cellpadding="0" cellspacing="0"  class="bloc" > 
+		
+						<tr> 
+								<td> <b><u>	 Carte adhérent<img src="./images/carte.jpg" width="40" height="25"> </u></b></br></br>
+ 
+									<a href="carte_adherent.html"> > En savoir plus</a></td>
+								   
+							<td><b><u>	Contact : </u></b> 0913 45 37 72<img src="./images/fone.png" width="40" height="30"></br></br>
+				
+					Lundi au vendredi </br>
+					de 8h à 20h et de</br>
+					9h à 20 h samedi</br></td>
+							
+							<td><b><u><a href="https://www.google.fr/maps/place/All%C3%A9e+du+Poitou,+92220+Bagneux/@48.7961506,2.3083419,17z/data=!3m1!4b1!4m2!3m1!1s0x47e670dd7c734585:0xbe230c37d5688d0e"> Trouver votre magasin</a><img src="france.png" width="40" height="30"> </u></b></br></br>
+						</br></td>
+						    
+						    
+						</tr>
+						
+					</table>
+<hr/>
+
+<div id="signature"> 
+	Par Eliass Hajajou, Choukri Imane & Yassine M'Chaar
+</div> 
+
+   </body>
+</html>
